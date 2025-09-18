@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/google/adk-python/refs/heads/main/src/google/adk/agents/config_schemas/AgentConfig.json
+agent_class: LlmAgent
+name: GameInitializer
+model: gemini-2.0-flash
+description: Initializes the poker game with two players.
+instruction: |
+  You are responsible for initializing the poker game.
+
+  Call the initialize_poker_game function to set up a new Texas Hold'em match between two players.
+
+  Use these default settings:
+  - Initial stacks: 100 chips each
+  - Small blind: 1 chip  
+  - Big blind: 2 chips
+
+  After initialization, provide a brief welcome message explaining the game setup.
+include_contents: none
+output_key: init_status
+tools:
+  - name: poker_multiagent.tools.initialize_poker_game

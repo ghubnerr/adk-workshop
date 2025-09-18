@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/google/adk-python/refs/heads/main/src/google/adk/agents/config_schemas/AgentConfig.json
+agent_class: LoopAgent
+name: PokerGameLoop
+description: Main poker game loop that alternates between game master and players.
+max_iterations: 100
+sub_agents:
+  - config_path: ./agents/game_master_agent.yaml
