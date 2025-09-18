@@ -2,6 +2,10 @@ import requests
 from google.adk.agents import Agent
 
 
+##### DO NOT EDIT ABOVE THIS LINE #####
+# Add your code here
+
+
 def get_weather(city: str) -> dict:
     """Retrieves the current weather report for a specified city using Open-Meteo API.
 
@@ -11,6 +15,7 @@ def get_weather(city: str) -> dict:
     Returns:
         dict: status and result or error msg.
     """
+    pass
 
 
 def get_current_time(city: str) -> dict:
@@ -22,21 +27,13 @@ def get_current_time(city: str) -> dict:
     Returns:
         dict: status and result or error msg.
     """
+    pass
 
 
-root_agent = Agent(
-    name="weather_time_agent",
-    model="gemini-2.0-flash",
-    description=("Agent to answer questions about the time and weather in a city."),
-    instruction=(
-        "You are a helpful agent who can answer user questions about the time and weather in a city."
-    ),
-    tools=[get_weather, get_current_time],
-)
+root_agent = ...
 
 
 ##### DO NOT EDIT BELOW THIS LINE #####
-
 
 _CITY_TIMEZONE_MAP = {
     "new york": "America/New_York",
