@@ -17,7 +17,7 @@ def flatten(items):
 # pylint: disable=too-many-statements, too-many-branches, too-many-locals
 
 CARD_RANKS_ORIGINAL = "23456789TJQKA"
-SUITS_ORIGINAL = "CDHS"
+SUITS_ORIGINAL = "♣️♦️♥️♠️"
 
 
 def get_winner(player_hands, table_cards):
